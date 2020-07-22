@@ -107,9 +107,8 @@ public class TicketView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        if (mDirty) {
-            doLayout();
-        }
+        doLayout();
+        
         if (mShadowBlurRadius > 0f && !isInEditMode()) {
             canvas.drawBitmap(mShadow, 0f, mShadowBlurRadius / 2f, null);
         }
